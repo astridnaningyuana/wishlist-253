@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form action="{{ url_for('saveuser')}}" method = "POST">
+      <h3>Sign Up</h3>
+
+
+                <select name="idselect" class="form-control">
+                  {% for row in rows %}
+                  <option value="{{row["id"]}}">{{row["id"]}}</option>
+                  {% endfor %}
+                </select><br>
+
+
+      Id<br>
+      <input type ="text" name="id" /></br>
+
+      First Name<br>
+      <input type ="text" name="firstname" /></br>
+
+      Last Name<br>
+      <input type ="text" name="lastname" /></br>
+
+      Gender<br>
+      <select name="gender">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </select> </br>
+
+      Email<br>
+      <input type ="email" name="email" /></br>
+
+      Username<br>
+      <input type="text" name="username"></br>
+
+      Password<br>
+      <input type="password" name="password"> </br>
+
+      <input type="Submit" value="Submit">
+
+  </form>
+
+
+</body>
+</html>

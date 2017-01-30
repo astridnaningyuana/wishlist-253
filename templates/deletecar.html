@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form action="{{ url_for('delcar')}}" method = "POST">
+      <h3>Delete Cars</h3>
+
+      <select name="idselect" class="form-control">
+        {% for row in rows %}
+        <option value="{{row["id"]}}">{{row["id"]}}</option>
+        {% endfor %}
+      </select>
+
+      <br>
+      Id<br>
+      <input type ="text" name="idcar" /></br>
+
+      <input type="Submit" value="Delete"><br>
+
+  </form>
+
+</body>
+</html>
